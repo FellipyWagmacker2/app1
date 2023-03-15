@@ -14,9 +14,13 @@ public class NextActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_next);
+        // Criando Intent que iniciou essa atividade
         Intent intent = getIntent();
+        // Seleciona o texto enviado na página anterior como um extra
         String Texto = intent.getStringExtra("Texto");
+        // Seleciona o TextView pela seu Id
         TextView tvExibir = findViewById(R.id.tvExibir);
+        // Armazena o texto recebido
         tvExibir.setText(Texto);
     }
 }
